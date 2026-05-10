@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Hub — Pet.proj</title>
+  <style>
+    :root {
+      --bg: #0f1419;
+      --card: #1a2332;
+      --text: #e7ecf3;
+      --muted: #8b9cb3;
+      --accent: #3d9cf5;
+      --accent2: #5ce1a8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Segoe UI", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .wrap {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+    }
+    h1 {
+      font-size: 1.75rem;
+      font-weight: 600;
+      margin: 0 0 0.5rem;
+    }
+    .tag {
+      display: inline-block;
+      font-size: 0.8rem;
+      color: var(--accent2);
+      margin-bottom: 1.5rem;
+    }
+    .card {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 1.5rem 1.75rem;
+      margin: 1.25rem 0;
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    p { margin: 0 0 1rem; color: var(--muted); }
+    p:last-child { margin-bottom: 0; }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+    code {
+      font-size: 0.9em;
+      background: rgba(0,0,0,0.35);
+      padding: 0.15em 0.45em;
+      border-radius: 4px;
+    }
+    ul { margin: 0.5rem 0 0; padding-left: 1.25rem; color: var(--muted); }
+    li { margin: 0.35rem 0; }
+    .btn {
+      display: inline-block;
+      margin-top: 0.75rem;
+      padding: 0.55rem 1rem;
+      background: var(--accent);
+      color: #0a0e12 !important;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none !important;
+    }
+    .btn:hover { filter: brightness(1.08); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Pet Hub</h1>
+    <span class="tag">sampatlh18 / pet.proj</span>
+
+    <div class="card">
+      <p><strong style="color: var(--text);">This repository is a Java web application</strong> (Jakarta Servlets, JSP, MySQL). It is meant to run on a servlet container such as Apache Tomcat, not as a purely static website.</p>
+      <p><strong style="color: var(--text);">GitHub Pages</strong> only hosts static files (HTML, CSS, JavaScript). It cannot execute your <code>.jsp</code> pages or connect to MySQL the way your app does when you use Tomcat locally.</p>
+    </div>
+
+    <div class="card">
+      <p style="color: var(--text); margin-bottom: 0.75rem;"><strong>Run the project locally</strong></p>
+      <ul>
+        <li>Clone: <code>git clone https://github.com/sampatlh18/pet.proj.git</code></li>
+        <li>Open the <code>PetHubProject</code> folder in Eclipse as a Dynamic Web Project (or build a WAR and deploy to Tomcat 10.x).</li>
+        <li>Import <code>pethub.sql</code> into MySQL and set env vars <code>MYSQL_USER</code>, <code>MYSQL_PASSWORD</code>, <code>MYSQL_URL</code> (see <code>env.example</code>).</li>
+        <li>Visit something like <code>http://localhost:8080/PetHubProject/</code> after deployment.</li>
+      </ul>
+      <a class="btn" href="https://github.com/sampatlh18/pet.proj">View repository on GitHub</a>
+    </div>
+  </div>
+</body>
+</html>
