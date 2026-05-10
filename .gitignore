@@ -1,0 +1,4 @@
+PetHubProject/build/
+PetHubProject/.settings/
+**/Thumbs.db
+.DS_Store
