@@ -84,12 +84,17 @@
     </div>
 
     <div class="card">
-      <p style="color: var(--text); margin-bottom: 0.75rem;"><strong>Run the project locally</strong></p>
+      <p style="color: var(--text); margin-bottom: 0.75rem;"><strong>Easiest: Docker</strong></p>
+      <p>Install Docker Desktop, clone the repo, then from the project root run <code>docker compose up --build</code> (or <code>run-docker.bat</code>). Open <code>http://localhost:8080/PetHubProject/</code>. First start may take a minute while MySQL imports the database.</p>
+    </div>
+
+    <div class="card">
+      <p style="color: var(--text); margin-bottom: 0.75rem;"><strong>Windows without Docker</strong></p>
       <ul>
         <li>Clone: <code>git clone https://github.com/sampatlh18/pet.proj.git</code></li>
-        <li>Open the <code>PetHubProject</code> folder in Eclipse as a Dynamic Web Project (or build a WAR and deploy to Tomcat 10.x).</li>
-        <li>Import <code>pethub.sql</code> into MySQL and set env vars <code>MYSQL_USER</code>, <code>MYSQL_PASSWORD</code>, <code>MYSQL_URL</code> (see <code>env.example</code>).</li>
-        <li>Visit something like <code>http://localhost:8080/PetHubProject/</code> after deployment.</li>
+        <li>In <code>PetHubProject</code>, run <code>powershell -ExecutionPolicy Bypass -File .\build.ps1</code> to build <code>target\PetHubProject.war</code> (downloads Maven once if needed).</li>
+        <li>Install MySQL, import <code>pethub.sql</code> into database <code>PetHub</code>, set <code>MYSQL_PASSWORD</code> (see <code>env.example</code>).</li>
+        <li>Deploy the WAR to Tomcat 10.x and open <code>http://localhost:8080/PetHubProject/</code>, or use Eclipse as a Dynamic Web Project.</li>
       </ul>
       <a class="btn" href="https://github.com/sampatlh18/pet.proj">View repository on GitHub</a>
     </div>

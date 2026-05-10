@@ -1,4 +1,6 @@
 PetHubProject/build/
+PetHubProject/target/
+PetHubProject/.maven/
 PetHubProject/.settings/
 **/Thumbs.db
 .DS_Store
